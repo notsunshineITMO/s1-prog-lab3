@@ -2,6 +2,6 @@ package person.activities;
 
 import technical.PartsOfRocket;
 
-public interface WatchingFor {
+public interface IWatchingFor {
      void watchFor(PartsOfRocket part);
 }

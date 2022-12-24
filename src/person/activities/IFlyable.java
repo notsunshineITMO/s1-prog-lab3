@@ -1,5 +1,5 @@
 package person.activities;
 
-public interface Flyable {
+public interface IFlyable {
      String Fly();
 }

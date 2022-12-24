@@ -1,11 +1,11 @@
 package person;
 
-import person.activities.Answer;
-import person.activities.Say;
-import person.activities.WatchingFor;
+import person.activities.IAnswer;
+import person.activities.ISay;
+import person.activities.IWatchingFor;
 import technical.*;
 
-public class Seledochka extends Person implements Describable, Answer, WatchingFor, Say {
+public class Seledochka extends Person implements IDescribable, IAnswer, IWatchingFor, ISay {
     private String location;
     private Where where = new Where();
     public Seledochka (String name){

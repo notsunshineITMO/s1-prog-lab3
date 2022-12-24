@@ -1,5 +1,5 @@
 package person.activities;
 
-public interface Say {
+public interface ISay {
      String SayAbout(String name);
 }

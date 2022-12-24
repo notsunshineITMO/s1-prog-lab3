@@ -2,7 +2,7 @@ package person.activities;
 
 import technical.PartsOfRocket;
 
-public interface Answer { //нейминги + разбораться с дефолтной реализацией
+public interface IAnswer { //нейминги + разбораться с дефолтной реализацией
     default void Answer(PartsOfRocket part, String whoDoIt) {
         System.out.print(whoDoIt + "отвечает - ");
         if (part == PartsOfRocket.FANS) {

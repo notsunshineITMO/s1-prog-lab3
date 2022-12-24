@@ -1,12 +1,12 @@
 package person;
 
-import person.activities.Answer;
-import person.activities.WatchingFor;
-import technical.Describable;
+import person.activities.IAnswer;
+import person.activities.IWatchingFor;
+import technical.IDescribable;
 import technical.PartsOfRocket;
 import technical.Where;
 
-public class Fuchsia extends Person implements Describable, Answer, WatchingFor {
+public class Fuchsia extends Person implements IDescribable, IAnswer, IWatchingFor {
     private String location;
     private Where where = new Where();
 

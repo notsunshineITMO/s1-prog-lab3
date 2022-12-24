@@ -1,9 +1,9 @@
 package other;
 
-import technical.Describable;
+import technical.IDescribable;
 import technical.Places;
 
-public class City implements Describable {
+public class City implements IDescribable {
 
     private String title;
     private String condition;

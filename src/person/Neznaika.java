@@ -1,10 +1,10 @@
 package person;
 
-import person.activities.Flyable;
+import person.activities.IFlyable;
 import technical.*;
-import person.activities.Ask;
+import person.activities.IAsk;
 
-public class Neznaika extends Person implements Describable, Ask, Flyable {
+public class Neznaika extends Person implements IDescribable, IAsk, IFlyable {
     private String location;
     private Where where = new Where();
 

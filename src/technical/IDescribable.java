@@ -1,6 +1,6 @@
 package technical;
 
-public interface Describable {
+public interface IDescribable {
     String describe();
 
 }

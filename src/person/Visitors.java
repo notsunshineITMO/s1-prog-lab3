@@ -1,11 +1,10 @@
 package person;
 
-import other.Building;
-import person.activities.Flyable;
+import person.activities.IFlyable;
 import technical.*;
-import person.activities.Ask;
+import person.activities.IAsk;
 
-public class Visitors extends Person implements Describable, Ask, Flyable {
+public class Visitors extends Person implements IDescribable, IAsk, IFlyable {
     private int count;
     private String location;
     private Where where = new Where();

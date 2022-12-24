@@ -1,12 +1,9 @@
 package other;
 
 
-import technical.Describable;
-import technical.Where;
+import technical.IDescribable;
 
-import java.util.Arrays;
-
-public class Building implements Describable {
+public class Building implements IDescribable {
     private boolean gravity;
     private String location;
     private String title;
