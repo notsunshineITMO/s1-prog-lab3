@@ -1,9 +1,10 @@
 package other;
 
+import technical.PartsOfRocket;
 import technical.Places;
 
 public class Rocket {
-    private final CabineOfControl cabineOfControl = new CabineOfControl(getLevelOfArmored());
+    private final CabineOfControl cabineOfControl;
     private final Engine engine;
     private final Fans fans;
     private final Thermostats thermostats;
@@ -12,14 +13,15 @@ public class Rocket {
     private byte levelOfArmored;
     private static final byte maxLevelOfArmored = 3;
 
-    public Rocket (Engine engine, Fans fans, Thermostats thermostats, AirCleaners airCleaners){
+    public Rocket(Engine engine, Fans fans, Thermostats thermostats, AirCleaners airCleaners, CabineOfControl cabineOfControl) {
         this.engine = engine;
         this.fans = fans;
         this.thermostats = thermostats;
         this.airCleaners = airCleaners;
+        this.cabineOfControl = cabineOfControl;
     }
 
-     public void launchSystems() throws InterruptedException {
+    public void launchSystems() throws InterruptedException {
         System.out.println("Запуск всех систем...");
         Thread.sleep(1000);
         engine.setOn(true);
@@ -29,7 +31,7 @@ public class Rocket {
         System.out.println("Все систеы запущены.");
         Thread.sleep(500);
         System.out.println();
-     }
+    }
 
     public void globalCheckUp() throws InterruptedException {
         System.out.println("Проверка всех систем...");
@@ -42,10 +44,9 @@ public class Rocket {
         Thread.sleep(250);
         System.out.println(airCleaners.allert());
         Thread.sleep(250);
-        if (engine.condition() && fans.condition() && thermostats.condition() && airCleaners.condition()){
+        if (engine.condition() && fans.condition() && thermostats.condition() && airCleaners.condition()) {
             System.out.println("Все системы в норме. Проверка прошла успешна!");
-        }
-        else {
+        } else {
             System.out.println("Сбой в одной из систем. Проверка не пройдена!!!");
         }
     }
@@ -59,18 +60,13 @@ public class Rocket {
         }
     }
 
-    public static void setLevelOfArmored(CabineOfControl obj, Places partOfRocket) {
-        if (partOfRocket == Places.UPPER_PART){
-            obj.levelOfArmored = 3;
+
+    public byte getLevelOfArmored(PartsOfRocket part) {
+        if (part == PartsOfRocket.CABINE_OF_CONTROL) {
+            return levelOfArmored = 3;
         }
-        else if (partOfRocket == Places.LOWER_PART){
-            CabineOfControl.levelOfArmored = 2;
+        else {
+            return levelOfArmored = 2;
         }
     }
-
-    public byte getLevelOfArmored() {
-        return levelOfArmored;
-    }
-
 }
-
