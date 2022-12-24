@@ -4,6 +4,7 @@ public class Thermostats {
     private boolean isOn;
     private String materia;
     private int count;
+    public static byte levelOfArmored;
 
 
     public Thermostats (String material, int count) {

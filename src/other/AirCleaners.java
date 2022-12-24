@@ -4,7 +4,6 @@ package other;
 public class AirCleaners {
     private int count;
     private String material;
-
     private boolean isOn;
 
     public AirCleaners(String material, int count) {

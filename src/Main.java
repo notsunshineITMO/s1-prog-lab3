@@ -29,9 +29,10 @@ public class Main {
         Engine engine = new Engine("steel", 1.25);
         Fans fans = new Fans("steel", 23);
         Thermostats thermostats = new Thermostats("steel", 8);
-        AirCleaners aircleaners = new AirCleaners("steel", 14);
+        AirCleaners airCleaners = new AirCleaners("steel", 14);
+        CabineOfControl cabineOfControl = new CabineOfControl((byte) 3);
 
-        Rocket rocket = new Rocket(engine, fans, thermostats, aircleaners);
+        Rocket rocket = new Rocket(engine, fans, thermostats, airCleaners, cabineOfControl);
 
 
 
