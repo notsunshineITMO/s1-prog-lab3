@@ -9,8 +9,6 @@ public class Rocket {
     private final Fans fans;
     private final Thermostats thermostats;
     private final AirCleaners airCleaners;
-    private Object[] shutDowned;
-    private byte levelOfArmored;
     private static final byte maxLevelOfArmored = 3;
 
     public Rocket(Engine engine, Fans fans, Thermostats thermostats, AirCleaners airCleaners, CabineOfControl cabineOfControl) {
@@ -62,6 +60,7 @@ public class Rocket {
 
 
     public byte getLevelOfArmored(PartsOfRocket part) {
+        byte levelOfArmored;
         if (part == PartsOfRocket.CABINE_OF_CONTROL) {
             return levelOfArmored = 3;
         }
