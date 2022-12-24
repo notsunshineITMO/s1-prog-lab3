@@ -4,5 +4,6 @@ public enum PartsOfRocket {
     FANS,
     AIR_CLEANERS,
     THERMOSTATS,
-    BYTECODE
+    BYTECODE,
+    CABINE_OF_CONTROL
 }
