@@ -9,7 +9,7 @@ public class Main {
     public void func() {
 
     }
-
+    Object
 
     public static void main(String[] args) throws InterruptedException {
         String pl_rocket = Places.ROCKET.toString();
