@@ -1,3 +1,8 @@
 1) == ?
+* == сравнивает объекты по их месту в памяти
 2) equals  зачем нужен и как работает
+* equals сравнивает значения объектов
 3) создать функцию высшего порядка
+* Consumer<T>
+void accept <T t>
+default Consumer<T>.andThen(Consumer<? super T> after)
